@@ -2,6 +2,10 @@
 
 The web front end for a modern Bachman Spinners public website. Built in Angular7 by Peter Mooney
 
+## Template
+
+HTML Based on a free template: The Order (by colorlib) - https://colorlib.com/preview/#theorder
+
 
 # Angular-CLI
 

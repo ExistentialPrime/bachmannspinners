@@ -85,7 +85,13 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/popper.js/dist/umd/popper-utils.min.js",
+              "node_modules/aos/dist/aos.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"

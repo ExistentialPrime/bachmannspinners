@@ -3,6 +3,7 @@ import { ModalComponent } from '../modals/modal.component';
 import { Modal } from '../../models';
 import { MatDialog } from '@angular/material';
 import swal from "sweetalert2";
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-landing-page',
@@ -17,6 +18,7 @@ export class LandingPageComponent implements OnInit {
 
   // Initialization
   ngOnInit() {
+    AOS.init();
   }
 
   // Modal Test

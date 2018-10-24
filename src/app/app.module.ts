@@ -14,6 +14,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 // Component Imports
 // -----------------------------------------------------------------------------------------------------
 import { AppComponent } from './components/app.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ModalComponent } from './components/modals/modal.component';
 
@@ -29,6 +31,8 @@ import { ModalComponent } from './components/modals/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
+    FooterComponent,
+    HeaderComponent,
     LandingPageComponent,
     ModalComponent
   ],

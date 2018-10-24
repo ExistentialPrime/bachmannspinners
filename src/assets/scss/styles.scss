@@ -5,10 +5,25 @@
 // Import bootstrap and other 3rd party packages first
 @import '~bootstrap/scss/bootstrap.scss';
 @import '~sweetalert2/dist/sweetalert2.min.css';
+@import '~font-awesome/css/font-awesome.css';
+@import '~aos/dist/aos.css';
+@import '~owl.carousel/dist/assets/owl.carousel.min.css';
+@import '~owl.carousel/dist/assets/owl.theme.default.css';
+
+// the Order template CSS imports
+@import '../css/style.css';
+@import '../css/animate.css';
+@import '../css/flaticon.css';
+@import '../css/icomoon.css';
+@import '../css/ionicons.min.css';
+@import '../css/jquery.timepicker.css';
+@import '../css/magnific-popup.css';
+@import '../css/open-iconic-bootstrap.min.css';
 
 // Import critical styles and colors
 @import './_typography.scss';  // font and color settings from style guide
-@import './material-theme.scss';  // our Angular Material colors and styles (import after typography)
+@import './_material-theme.scss';  // our Angular Material colors and styles (import after typography)
+@import './_theorder.scss'; // template styles for The Order
 
 // Component-sepcific style Imports
 @import './_modal.scss';
@@ -27,14 +42,14 @@
 
 // App layout styles
 .app-header {
-    margin-top: 0px;
+    margin-top: 0;
  }
  .app-content { 
-     padding: 15px;
+    margin-top: 0;
  }
  .app-footer {
-     display: flex;
-     flex-direction: row;
-     align-items: center;
-     justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
  }
