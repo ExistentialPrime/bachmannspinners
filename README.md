@@ -1,4 +1,9 @@
-# Bachmanspinners
+# Bachman Spinners
+
+The web front end for a modern Bachman Spinners public website. Built in Angular7 by Peter Mooney
+
+
+# Angular-CLI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
 
