@@ -1,0 +1,23 @@
+.modal {
+
+    .mat-dialog-container { 
+       // main container styles
+    }
+
+    .mat-dialog-title {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #bbb;
+        color: $gray;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: 'Lora'
+    }
+
+    .mat-dialog-content {
+        font-size: 0.9rem;
+    }
+
+    .mat-dialog-actions { 
+        .btn { min-width: 100px; }
+    }
+}

@@ -1,0 +1,17 @@
+
+<h1 mat-dialog-title>{{modal.title}}</h1>
+<div mat-dialog-content>
+    <p>{{modal.message}}</p>        
+
+    <!-- This should work for most things, but test all cases -->
+    <div *ngIf="modal.data">
+        <div *ngFor="let item of modal.data">
+            {{item}}
+        </div>
+    </div>
+</div>
+
+<div mat-dialog-actions align="center" class="mt-2">
+    <button class="btn btn-secondary mr-3" (click)="onCancelClick()" *ngIf="modal.showCancel">Cancel</button>
+    <button class="btn btn-devblue" mat-button (click)="onConfirmClick()">{{modal.confirmText}}</button>
+</div>

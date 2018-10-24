@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------
+// App Styles (SASS)
+// -----------------------------------------------------------------
+
+// Import bootstrap and other 3rd party packages first
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~sweetalert2/dist/sweetalert2.min.css';
+
+// Import critical styles and colors
+@import './_typography.scss';  // font and color settings from style guide
+@import './material-theme.scss';  // our Angular Material colors and styles (import after typography)
+
+// Component-sepcific style Imports
+@import './_modal.scss';
+@import './_landing-page.scss';
+
+
+
+
+// Shortcut classes
+.small-text { font-size: 0.8rem; }
+.micro-text { font-size: 0.63rem; }
+.larger-text { font-size: 1.3rem; }
+.clickable { cursor: pointer; }
+.translucent { opacity: 0.8; }
+
+
+// App layout styles
+.app-header {
+    margin-top: 0px;
+ }
+ .app-content { 
+     padding: 15px;
+ }
+ .app-footer {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: center;
+ }

@@ -1,0 +1,41 @@
+// ---------------------------------------------------
+// TYPOGRAPHY STYLES, FONTS, AND COLORS
+// ---------------------------------------------------
+
+// Colors
+$green: #4FDA7C;
+$lightgreen: #53e681;
+$darkgreen: #205932;
+
+$blue: #253053;
+$lightblue: #3d4e87;
+$darkblue: #1a223b;
+$devblue: #56a0d3;
+
+$gray: #4d4d4d;
+$lightgray: #999999;
+$darkgray: #1a1a1a;
+
+$almostwhite: #fbfbfb;
+$offwhite: #dfdfdf;
+
+// Color Classes
+.color-green { color: $green; }
+.color-lightgreen { color: $lightgreen; }
+.color-darkgreen { color: $darkgreen; }
+
+.color-blue { color: $blue; }
+.color-lightblue { color: $lightblue; }
+.color-darkblue { color: $darkblue; }
+
+.color-gray { color: $gray; }
+.color-lightgray { color: $lightgray; }
+.color-darkgray { color: $darkgray; }
+
+.color-white { color: white !important; }
+.color-almostwhite { color: $almostwhite; }
+.color-offwhite { color: $offwhite; }	// used for dividing lines and borders
+
+// Typography Font and Header Styles (Reminder: weight 400 = regular/normal)
+body { font-weight: 400; font-size: 1rem; color: $gray; }
+.alt { font-weight: 400; font-size: 0.8rem; color: $lightgray; }
