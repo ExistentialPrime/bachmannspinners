@@ -2,7 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Modal } from '../../models';
 
-// Angular Material Dialog Example: 
+// Angular Material Dialog Example:
 // https://material.angular.io/components/dialog/examples
 
 
@@ -11,16 +11,16 @@ import { Modal } from '../../models';
     templateUrl: './modal.component.html',
   })
   export class ModalComponent {
-  
+
     // Constructor (Dependency Injection)
     constructor(
       public dialogRef: MatDialogRef<ModalComponent>,
       @Inject(MAT_DIALOG_DATA) public modal: Modal
     ) {}
-  
+
     // Initialization
     ngOnInit() {
-      console.log('modal creation code initializing. Modal info: ', this.modal)
+      console.log('modal creation code initializing. Modal info: ', this.modal);
         /* Reminder: the modal class has the following members:
         title: string;
         message: string;
@@ -28,7 +28,7 @@ import { Modal } from '../../models';
         confirmText?: string;
         data?: any[];
         */
-        if (!this.modal.confirmText) { this.modal.confirmText = "Confirm"; }
+      if (!this.modal.confirmText) { this.modal.confirmText = 'Confirm'; }
 
     }
 
@@ -40,5 +40,5 @@ import { Modal } from '../../models';
     onConfirmClick(): void {
         this.dialogRef.close();
     }
-  
+
   }

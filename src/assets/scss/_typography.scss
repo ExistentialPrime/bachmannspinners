@@ -39,3 +39,4 @@ $offwhite: #dfdfdf;
 // Typography Font and Header Styles (Reminder: weight 400 = regular/normal)
 body { font-weight: 400; font-size: 1rem; color: $gray; }
 .alt { font-weight: 400; font-size: 0.8rem; color: $lightgray; }
+button, .button { cursor: pointer; }

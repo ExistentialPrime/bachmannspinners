@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5,
 	right: 0;
 	z-index: 3;
 	top: 10px;
-	@include media-breakpoint-down(md) {
+	@include media-breakpoint-down(sm) {
 		background: $black!important;
 		top: 0;
 		position: relative;
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5,
 					color: $white;
 				}
 				opacity: 1!important;
-				@include media-breakpoint-down(md) {
+				@include media-breakpoint-down(sm) {
 					padding-top: 10px;
 					padding-bottom: 10px;
 					padding-left: 0px;
@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5,
 				position: relative;
 				margin-left: 20px;
 				padding-left: 20px;
-				@include media-breakpoint-down(md) {
+				@include media-breakpoint-down(sm) {
 					padding-left: 0;
 					margin-left: 0;
 				}
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5,
 					left: 0;
 					width: 2px;
 					background: rgba($white, .05);
-					@include media-breakpoint-down(md) {
+					@include media-breakpoint-down(sm) {
 						display: none;
 					}
 				}
@@ -140,7 +140,7 @@ h1, h2, h3, h4, h5,
 		}
 
 		.navbar-nav {
-			@include media-breakpoint-down(md) {
+			@include media-breakpoint-down(sm) {
 				background: none;
 				border-radius: 0px;
 				padding-left: 0rem!important;
@@ -149,7 +149,7 @@ h1, h2, h3, h4, h5,
 		}
 
 		.navbar-nav {
-			@include media-breakpoint-down(sm) {
+			@include media-breakpoint-down(xs) {
 				background: none;
 				padding-left: 0!important;
 				padding-right: 0!important;
@@ -229,7 +229,7 @@ h1, h2, h3, h4, h5,
 	}
   .btn {
 		@include media-breakpoint-down(md) {
-			width: 100%!important;
+			// width: 100%!important;
 		}
 	}
 	a {

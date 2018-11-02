@@ -8,8 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 
 // 3rd Party Module Imports
 // -----------------------------------------------------------------------------------------------------
-import { MatSelectModule, MatPaginatorModule, MatTableModule, MatSortModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // larger package, but import all NG-Bootstrap modules
 
 // Component Imports
 // -----------------------------------------------------------------------------------------------------
@@ -18,6 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { ModalComponent } from './components/modals/modal.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { BuildYourOwnComponent } from './components/build/build-your-own.component';
 
 // Pipes
 // -----------------------------------------------------------------------------------------------------
@@ -31,17 +34,20 @@ import { ModalComponent } from './components/modals/modal.component';
 @NgModule({
   declarations: [
     AppComponent,
+    BuildYourOwnComponent,
     FooterComponent,
+    GalleryComponent,
     HeaderComponent,
     LandingPageComponent,
-    ModalComponent
+    ModalComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    NgbCollapseModule
   ],
   providers: [
     // services here

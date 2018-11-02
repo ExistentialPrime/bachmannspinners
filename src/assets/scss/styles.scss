@@ -11,7 +11,7 @@
 @import '~owl.carousel/dist/assets/owl.theme.default.css';
 
 // the Order template CSS imports
-@import '../css/style.css';
+// @import '../css/style.css'; // this conflicts with _theorder.scss
 @import '../css/animate.css';
 @import '../css/flaticon.css';
 @import '../css/icomoon.css';
@@ -28,6 +28,7 @@
 // Component-sepcific style Imports
 @import './_modal.scss';
 @import './_landing-page.scss';
+@import './_gallery.scss';
 
 
 
@@ -38,7 +39,7 @@
 .larger-text { font-size: 1.3rem; }
 .clickable { cursor: pointer; }
 .translucent { opacity: 0.8; }
-
+.fa-lg { font-size: 2rem; }
 
 // App layout styles
 .app-header {
@@ -53,3 +54,13 @@
     align-items: center;
     justify-content: center;
  }
+
+// Top Nav bar styles
+.nav-item .nav-link {
+    &.active { 
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+
+ 
