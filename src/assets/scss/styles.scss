@@ -24,11 +24,13 @@
 @import './_typography.scss';  // font and color settings from style guide
 @import './_material-theme.scss';  // our Angular Material colors and styles (import after typography)
 @import './_theorder.scss'; // template styles for The Order
+@import './_buttons.scss'; // template styles for buttons
 
 // Component-sepcific style Imports
 @import './_modal.scss';
 @import './_landing-page.scss';
 @import './_gallery.scss';
+@import './_build-widget.scss';
 
 
 
@@ -62,5 +64,8 @@
         font-weight: bold;
     }
 }
+
+
+
 
  

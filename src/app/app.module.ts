@@ -21,6 +21,7 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { ModalComponent } from './components/modals/modal.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { BuildYourOwnComponent } from './components/build/build-your-own.component';
+import { BuildWidgetComponent } from './components/build/build-widget.component';
 
 // Pipes
 // -----------------------------------------------------------------------------------------------------
@@ -28,7 +29,7 @@ import { BuildYourOwnComponent } from './components/build/build-your-own.compone
 
 // Services
 // -----------------------------------------------------------------------------------------------------
-// import { AppRouterModule } from './app-router.module';  // separate file for easy routing
+import { BuildService } from './services/build.service';
 
 // Module Declaration
 @NgModule({
@@ -40,6 +41,7 @@ import { BuildYourOwnComponent } from './components/build/build-your-own.compone
     HeaderComponent,
     LandingPageComponent,
     ModalComponent,
+    BuildWidgetComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -50,7 +52,7 @@ import { BuildYourOwnComponent } from './components/build/build-your-own.compone
     NgbCollapseModule
   ],
   providers: [
-    // services here
+    BuildService
   ],
   bootstrap: [AppComponent],
   entryComponents: [

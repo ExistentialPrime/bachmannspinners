@@ -1,0 +1,39 @@
+<div class="build-widget">
+  <h5>Current Spinner</h5>
+  <p>Id: {{spinner.id}}</p>
+  <p>Name: {{spinner.name}}</p>
+  <div>Components:
+    <ul>
+      <li *ngFor="let c of spinner.components">{{c.color}} {{c.type}} (Size {{c.size}})</li>
+    </ul>
+  </div>
+
+  <div>
+    <h5>Bead Examples</h5>
+    <div class="spinner-component bead red"></div>
+    <div class="spinner-component bead white"></div>
+    <div class="spinner-component bead black"></div>
+  </div>
+
+  <div>
+    <h5>Blade Examples</h5>
+    <div class="spinner-component blade gold"></div>
+    <div class="spinner-component blade silver"></div>
+    <div class="spinner-component blade black"></div>
+  </div>
+
+  <div>
+    <h5>Hook Examples</h5>
+    <div class="spinner-component hook"></div>
+  </div>
+
+  <div>
+    <h5>Notes:</h5>
+    <ul>
+      <li>Parts widget on left 1/3 with accordian for each component type</li>
+      <li>Current spinner in middle/right 2/3</li>
+      <li>Drag and drop from control widget</li>
+    </ul>
+  </div>
+
+</div>

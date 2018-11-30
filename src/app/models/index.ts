@@ -9,3 +9,5 @@
 // -----------------------------------------------------------------------
 
 export { Modal } from './modal';
+export { SpinnerComponent } from './custom-spinner';
+export { CustomSpinner, Blade, Bead } from './custom-spinner';
