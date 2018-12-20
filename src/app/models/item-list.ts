@@ -24,7 +24,7 @@ export const ALLSHOPITEMS: CartItem[] = [
   { 
     id: 3,
     name: 'Hog Hunter - Halloween', 
-    description: 'Stealth black blade with alternating orange and black beaded body. It\'s scary good!',
+    description: 'Stealth black blade with alternating orange and black beaded body. Halloween themed. It\'s scary good!',
     price: 5.50,
     image: 'spinner-halloween-hoghunter.jpg',
   },

@@ -26,7 +26,12 @@ export class ShopService {
 
   // Grab our list of items in the shop
   public getAllShopItems(): CartItem[] {
-    return ALLSHOPITEMS;
+    let items = ALLSHOPITEMS;
+    items.forEach(i => { 
+      i.qty = 1;
+      i.qtyPrice = i.qty * i.price;
+    });
+    return items;
   }
 
   // Create a new shopping cart
@@ -46,27 +51,57 @@ export class ShopService {
     // check if the item already exists in the cart, if so just increase qty
     let existingItem = c.items.find(i => i.id === item.id);
     if (existingItem) {
-      existingItem.qty += qty;
-      existingItem.qtyPrice = existingItem.price * existingItem.qty;
+      existingItem.qty = Number(existingItem.qty + qty);
     } // else add entire item to cart
     else {
       item.qty = qty;
-      item.qtyPrice = item.price * item.qty;
       c.items.push(item);
     }
     this.updateCart();
   }
 
+  // Remove an item to the cart
+  public removeItem(item: CartItem): void { 
+    let c = this._currentCart.value;
+    let existingItem = c.items.find(i => i.id === item.id);
+    if (existingItem) {
+      c.items = c.items.filter(i => i != existingItem);
+    }
+    this.updateCart();
+  }
+
+  // Update an existing item in the cart (ie. change quantity)
+  public updateItem(item: CartItem): void { 
+    let c = this._currentCart.value;
+    let existingItem = c.items.find(i => i.id === item.id);
+    console.log('updating item. old qty: ' + existingItem.qty + ', new qty: ' + item.qty);
+    if (existingItem) {
+      existingItem.qty = item.qty;
+    }
+    this.updateCart();
+  }
+
+
   // Update Cart prices, etc
   private updateCart(): void {
+    console.log('updating cart: ', this._currentCart.value);
     let c = this._currentCart.value;
-
-    let total: number = 0;
-    c.items.forEach(i => { total += Number(i.qtyPrice) })
-    c.totalBasePrice = total;
+    c.totalItems = 0;
+    c.totalBasePrice = 0;
+    c.items.forEach(i => {
+      i.qtyPrice = i.price * i.qty;
+      c.totalBasePrice += i.qtyPrice;
+      c.totalItems += i.qty;
+    })
     c.totalPriceWithTax = c.totalBasePrice;
 
     this._currentCart.next(c); // publish the update
+  }
+
+
+  // Testing only
+  public setMockCart(c: Cart): void {
+    this._currentCart.next(c);
   }
 
 }

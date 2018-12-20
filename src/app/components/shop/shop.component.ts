@@ -13,6 +13,7 @@ export class ShopComponent implements OnInit {
   // Properties
   inventory: CartItem[];
   cart$: Cart;
+  
 
   // Constructor (Dependency Injection)
   constructor(
@@ -26,7 +27,10 @@ export class ShopComponent implements OnInit {
   }
 
   addItemToCart(item: CartItem, qty: number): void {
+    qty = Number(qty);
     this.shopService.addItem(item, qty);
   }
+
+  
 
 }

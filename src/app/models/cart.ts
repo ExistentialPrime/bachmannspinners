@@ -6,6 +6,7 @@ import { CartItem } from './cart-item';
 export interface Cart {
     orderId: string;            // GUID for unique identification
     items?: CartItem[];         // All the items in the cart
+    totalItems?: number;        // Total number of items in the cart
     totalBasePrice?: number;    // cost of all the items in the cart
     totalPriceWithTax?: number; // Total price with tax included
 
@@ -13,9 +14,11 @@ export interface Cart {
     contactName?: string;
     contactEmail?: string;
     contactPhone?: string;
-    deliveryType?: string;
+    message?: string;
     shippingAddress?: string;
-    paypalEmail?: string; 
+    deliveryType?: string;
+    paymentType?: string;
+    paymentEmail?: string;      // IE. for paypal
 }
 
 

@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'gallery', component: GalleryComponent },
   { path: 'shop', component: ShopComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'checkout', component: CartComponent },
   { path: 'build-your-own', component: BuildYourOwnComponent },
 ];
 
