@@ -22,6 +22,8 @@ import { ModalComponent } from './components/modals/modal.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { BuildYourOwnComponent } from './components/build/build-your-own.component';
 import { BuildWidgetComponent } from './components/build/build-widget.component';
+import { ShopComponent } from './components/shop/shop.component';
+import { CartComponent } from './components/cart/cart.component';
 
 // Pipes
 // -----------------------------------------------------------------------------------------------------
@@ -30,6 +32,9 @@ import { BuildWidgetComponent } from './components/build/build-widget.component'
 // Services
 // -----------------------------------------------------------------------------------------------------
 import { BuildService } from './services/build.service';
+import { HelperService } from './services/helper.service';
+import { ShopService } from './services/shop.service';
+
 
 // Module Declaration
 @NgModule({
@@ -42,6 +47,8 @@ import { BuildService } from './services/build.service';
     LandingPageComponent,
     ModalComponent,
     BuildWidgetComponent,
+    ShopComponent,
+    CartComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -52,7 +59,9 @@ import { BuildService } from './services/build.service';
     NgbCollapseModule
   ],
   providers: [
-    BuildService
+    BuildService,
+    HelperService,
+    ShopService
   ],
   bootstrap: [AppComponent],
   entryComponents: [

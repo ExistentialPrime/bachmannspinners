@@ -1,0 +1,43 @@
+.shop { 
+  position: relative;
+  
+  .shop-item-container { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .shop-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+    max-width: 340px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+
+    img {  // NotE: Currently all shop images are 320x320
+      width: 100%;
+      max-width: 320px;
+      max-height: 320px;
+    }
+  }
+
+  .cart-widget-bottom { 
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    .cart-widget-core { 
+      border: 1px solid gray;
+      background: white;
+      padding: 10px 25px 10px 25px;
+    }
+
+  }
+
+}

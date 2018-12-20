@@ -8,10 +8,10 @@
  * --------------------------------------------------------------------------*/
 
 import { Injectable } from '@angular/core';
-import { Location } from '@angular/common'
 import { Observable, BehaviorSubject, of } from 'rxjs';
 import { map, take, filter, distinctUntilChanged } from 'rxjs/operators';
 import { CustomSpinner, Bead, Blade } from '../models';
+import { HelperService } from './helper.service';
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +28,9 @@ export class BuildService {
 
 
     // Constructor (Dependency Injection and setup)
-    constructor() {
+    constructor(
+        private helper: HelperService,
+    ) {
       this.savedSpinners = [];
     }
 
@@ -38,7 +40,7 @@ export class BuildService {
     if (this._spinner.getValue() !== null) { this.savedSpinners.push(this._spinner.getValue()); }
 
     let newSpinner: CustomSpinner = {
-        id: this.generateUUID(),
+        id: this.helper.generateUUID(),
         name: 'Unnamed Spinner',
         components: [
             new Bead({ color: 'Red', size: 14, position: 1 }),
@@ -53,19 +55,7 @@ export class BuildService {
 
     // Private Support Functions
     // ---------------------------------------------------------------------------------------
-
-    // Generate a random GUID
-    private generateUUID() { // Public Domain/MIT
-        var d = new Date().getTime();
-        if (typeof performance !== 'undefined' && typeof performance.now === 'function'){
-            d += performance.now(); //use high-precision timer if available
-        }
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-            var r = (d + Math.random() * 16) % 16 | 0;
-            d = Math.floor(d / 16);
-            return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
-            });
-    }
+    
 
 
 }
