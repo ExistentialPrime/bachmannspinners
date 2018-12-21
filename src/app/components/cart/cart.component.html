@@ -21,14 +21,14 @@
         <h3><i class="fa fa-shopping-cart mr-3" aria-hidden="true"></i> My Cart</h3>
         <div class="cart-table">
           <div class="cart-header-row font-weight-bold row">
-            <div class="col-5">Item</div>
-            <div class="col-2">Quantity</div>
+            <div class="col-4 col-md-5">Item</div>
+            <div class="col-3 col-md-2">Quantity</div>
             <div class="col-3">Price</div>
             <div class="col-2">Remove</div>
           </div>
           <div class="cart-table-row row" *ngFor="let item of cart$.items">
-            <div class="col-5">{{item.name}}</div>
-            <div class="col-2">
+            <div class="col-4 col-md-5">{{item.name}}</div>
+            <div class="col-3 col-md-2">
               <input type="number" [(ngModel)]="item.qty" min="1" max="100" (keyup.enter)="updateItemQty(item)"/>
               <i class="fa fa-pencil clickable ml-2" aria-hidden="true" title="Update quantity" (click)="updateItemQty(item)"></i>
             </div>
