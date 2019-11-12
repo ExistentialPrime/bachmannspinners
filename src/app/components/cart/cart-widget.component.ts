@@ -24,13 +24,13 @@ export class CartWidgetComponent implements OnInit {
 
   private cartUpdated(cart: Cart): void {
     this.cart$ = cart;
-  } 
+  }
 
   removeItemFromCart(item: CartItem): void {
     // this.shopService.removeItem(item);
   }
 
-  toggleExpanded() { 
+  toggleExpanded() {
     this.expandCart = !this.expandCart;
   }
 

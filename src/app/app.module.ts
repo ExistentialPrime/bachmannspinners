@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
+import { OwlModule } from 'ngx-owl-carousel';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; // larger package, but import all NG-Bootstrap modules
 
 // Component Imports
@@ -63,7 +64,8 @@ import { ShopService } from './services/shop.service';
     HttpClientModule,
     MatDialogModule,
     MatSnackBarModule,
-    NgbCollapseModule
+		NgbCollapseModule,
+		OwlModule
   ],
   providers: [
     BuildService,

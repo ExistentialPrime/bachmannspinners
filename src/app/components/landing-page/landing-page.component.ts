@@ -18,8 +18,7 @@ export class LandingPageComponent implements OnInit {
   }
 
   showVideo() {
-    swal('Play Video', 'We need a sweet promo video or fish catch or release video here', 'success');
+    swal.fire('Play Video', 'We need a sweet promo video or fish catch or release video here', 'success');
   }
-  
 
 }

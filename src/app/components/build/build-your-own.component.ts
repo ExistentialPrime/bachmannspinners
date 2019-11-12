@@ -22,17 +22,17 @@ export class BuildYourOwnComponent implements OnInit {
   }
 
   testSwal() {
-    swal('Swal works!', 'sweet alert 2 is set up correctly', 'success');
+    swal.fire('Swal works!', 'sweet alert 2 is set up correctly', 'success');
   }
 
   comingSoon() {
-    swal('Coming Soon', 'We\'re still working on this part of the site.', 'success');
+    swal.fire('Coming Soon', 'We\'re still working on this part of the site.', 'success');
   }
 
   // Modal Test
-  testModal() { 
+  testModal() {
     console.log('firing test modal...');
-    let modalData: Modal = { 
+    let modalData: Modal = {
       title: 'Modal Test Successful',
       message: 'Pretty cool huh',
       confirmText: 'Ok',

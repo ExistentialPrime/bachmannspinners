@@ -81,6 +81,7 @@
 
     </div>
 
+		<!-- 
     <div class="row mt-5">
       <div class="col text-center">
         <div class="block-27">
@@ -95,7 +96,45 @@
           </ul>
         </div>
       </div>
-    </div>
+		</div>
+	-->
+
+	<!-- Slider /Spinner Gallery section -->
+	<section class="ftco-section-2 bg-light">
+		<div class="container-fluid">
+			<div class="row justify-content-center mb-5 pb-5">
+				<div class="col-md-7 text-center" data-aos="fade-up">
+					<h2>Want more?</h2>
+					<h5>Here's a large collection of even more fish, all caught on Bachman Spinners!</h5>
+				</div>
+			</div>
+		</div>
+
+		<!-- Owl Carousel -->
+		<div>
+		  <owl-carousel [options]="CarouselOptions" [items]="imageGallery" [carouselClasses]="['owl-theme', 'sliding']" >  
+				<div class="item" *ngFor="let img of imageGallery; let i = index">  
+					<!--<div class="d-flex justify-content-center">  
+						<img style="height: 300px;" [attr.data-src]="'/assets/img/gallery/' + img" />
+					</div>  -->
+					<div class="thumbnail-image d-flex flex-column-reverse align-items-center" 
+						[ngStyle]="{'background': 'url(' + img + ')no-repeat scroll center center / auto 500px'}">
+						<!--<p class="clickable" (click)="expandImage(img)">[Enlarge]</p>-->
+						<p class="clickable" >
+							<a [href]="img" target="_blank">[View Full Screen]</a>
+						</p>
+						<p>{{i + 1}} of {{imageGallery.length}}</p>
+					</div>
+				</div>
+			</owl-carousel>
+		</div>
+
+	</section>
+
+	
+	
+
+
 
 
   </div>
