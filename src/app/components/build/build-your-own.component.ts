@@ -25,6 +25,10 @@ export class BuildYourOwnComponent implements OnInit {
     swal('Swal works!', 'sweet alert 2 is set up correctly', 'success');
   }
 
+  comingSoon() {
+    swal('Coming Soon', 'We\'re still working on this part of the site.', 'success');
+  }
+
   // Modal Test
   testModal() { 
     console.log('firing test modal...');

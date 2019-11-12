@@ -1,0 +1,22 @@
+// Button Styles
+
+
+.btn-outline-white {  // piggy backs off the existing one in TheOrder.css
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #000000;
+    color: white;
+}
+
+
+.btn-outline-gray { 
+    font-weight: bold;
+    text-shadow: 0px 0px 4px #000000;
+    color: white;
+    border-color: rgba(75, 75, 75, 0.8);
+    background: none;
+    border-radius: 0px;
+    border-width: 2px;
+}
+.btn-outline-gray:hover {
+  background: rgba(75, 75, 75, 0.8);
+ }

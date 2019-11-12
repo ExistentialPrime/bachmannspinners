@@ -1,0 +1,24 @@
+<div class="cart-widget-sticky" *ngIf="cart$">
+
+  <!-- Cart Overview (Collapsed) -->
+  <div class="cart-widget-collapsed" >
+    <div class="d-flex flex-row clickable" (click)="toggleExpanded()">
+      <i class="fa fa-shopping-cart fa-lg mr-3" aria-hidden="true"></i>
+      <p>{{cart$.totalItems}} items - {{ cart$.totalBasePrice | currency:'USD'}}</p>
+    </div>
+    <div class="d-flex flex-row-reverse pb-3" *ngIf="expandCart">
+      <button class="btn btn-secondary" routerLink="/checkout">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Cart Details (Expanded) -->
+  <div class="cart-widget-expanded clickable" [hidden]="!expandCart" (click)="toggleExpanded()">
+    <h5 style="font-weight: 400;">Shopping Cart</h5>
+    <div *ngFor="let item of cart$.items">
+      {{item.name}} x {{item.qty}} : {{item.qtyPrice | currency:'USD'}}
+    </div>
+    <div class="font-weight-bold">
+      Total Price: <span>{{ cart$.totalBasePrice | currency:'USD'}}</span>
+    </div>
+  </div>
+</div>

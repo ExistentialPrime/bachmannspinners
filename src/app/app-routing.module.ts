@@ -8,12 +8,17 @@ import { Routes, RouterModule } from '@angular/router';
 import { BuildYourOwnComponent } from './components/build/build-your-own.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
+import { ShopComponent } from './components/shop/shop.component';
+import { CartComponent } from './components/cart/cart.component';
 
 // Routes
 // -----------------------------------------------------------------------------
 const routes: Routes = [
   { path: '', component: LandingPageComponent, pathMatch: 'full' },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'shop', component: ShopComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'checkout', component: CartComponent },
   { path: 'build-your-own', component: BuildYourOwnComponent },
 ];
 

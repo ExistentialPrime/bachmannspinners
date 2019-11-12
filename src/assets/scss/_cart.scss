@@ -1,0 +1,38 @@
+.cart {
+
+  .fa { color: $lightgray; }
+
+
+  .cart-details {
+    
+    border: 1px solid #aaa;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
+    padding: 20px;
+    background: white;
+  }
+
+  .cart-table { 
+  
+  }
+  .cart-header-row {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+  }
+  .cart-table-row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .cart-summary-row {
+    padding-top: 5px;
+    border-top: 1px solid #ddd;
+  }
+}
+
+
+// Vertical Tablet/Phone resolution breakpoint: 768px (iphone 6 750px)
+// Super-tiny screen where text overflows
+@media only screen and (max-width: 520px) {
+  .cart-table-row, .cart-header-row {
+      font-size: 0.8rem;
+   }
+}

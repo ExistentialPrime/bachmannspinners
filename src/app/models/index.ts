@@ -8,4 +8,8 @@
 //      import { Profile } from '../models/profile'
 // -----------------------------------------------------------------------
 
+export { Cart } from './cart';
+export { CartItem } from './cart-item';
 export { Modal } from './modal';
+export { SpinnerComponent } from './custom-spinner';
+export { CustomSpinner, Blade, Bead } from './custom-spinner';

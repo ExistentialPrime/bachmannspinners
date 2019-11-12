@@ -1,0 +1,132 @@
+<div class="cart">
+
+  <!-- Hero -->
+  <section class="ftco-cover overlay" style="background-image: url(assets/img/tim-bachman.jpg);" id="section-home" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row align-items-center justify-content-center ftco-vh-100">
+        <div class="col-md-9 text-center">
+          <h1 class="ftco-heading mb-4" data-aos="fade-up" data-aos-delay="500">Shopping Cart</h1>
+          <h2 class="h5 ftco-subheading mb-5" data-aos="fade-up"  data-aos-delay="600">Goodies below</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Cart Summary -->
+  <div class="ftco-section bg-light">    
+    <div class="container">
+      <div class="cart-details" data-aos="fade-up">
+        <h3><i class="fa fa-shopping-cart mr-3" aria-hidden="true"></i> My Cart</h3>
+        <div class="cart-table">
+          <div class="cart-header-row font-weight-bold row">
+            <div class="col-4 col-md-5">Item</div>
+            <div class="col-3 col-md-2">Quantity</div>
+            <div class="col-3">Price</div>
+            <div class="col-2">Remove</div>
+          </div>
+          <div class="cart-table-row row" *ngFor="let item of cart$.items">
+            <div class="col-4 col-md-5">{{item.name}}</div>
+            <div class="col-3 col-md-2">
+              <input type="number" [(ngModel)]="item.qty" min="1" max="100" (keyup.enter)="updateItemQty(item)"/>
+              <i class="fa fa-pencil clickable ml-2" aria-hidden="true" title="Update quantity" (click)="updateItemQty(item)"></i>
+            </div>
+            <div class="col-3">{{item.qtyPrice | currency:'USD'}}</div>
+            <div class="col-2">
+              <i class="fa fa-trash clickable" aria-hidden="true" title="Remove Item" (click)="removeItem(item)"></i>
+            </div>
+          </div>
+          <div *ngIf="cart$.items.length < 1" class="pt-3 pb-3 pl-3">
+            <h4>You do not have any items in your shopping cart. Go add some!</h4>
+          </div>
+          <div class="cart-summary-row font-weight-bold row">
+            <div class="col-5">Total:</div>
+            <div class="col-2">{{cart$.totalItems}}</div>
+            <div class="col-3">{{cart$.totalBasePrice | currency:'USD'}}</div>
+            <div class="col-2"><!--w/Tax:<br/>{{cart$.totalPriceWithTax | currency:'USD'}}--></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center mt-3" data-aos="fade-up">
+        <button class="btn btn-secondary" routerLink="/cart" fragment="checkout">Proceed to Checkout</button>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- Checkout -->
+  <div class="ftco-section">
+    <div class="container" NAME="checkout">
+      <div class="row justify-content-center mb-5 pb-5">
+        <div class="col-md-7 text-center" data-aos="fade-up">
+          <h2>Checkout</h2>
+        </div>
+      </div>
+
+      <div class="row block-9" data-aos="fade-up">
+
+
+          <!-- Left side form info -->
+          <div class="col-md-6 pr-md-5">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Your Phone">
+            </div>
+            <div class="form-group">
+              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Other info"></textarea>
+            </div>
+                      
+          </div>
+
+          <!-- Right side form info -->
+          <div class="col-md-6">
+            <div class="form-group">
+              <span class="mr-2">Delivery Type</span>
+              <select>
+                  <option value="mail">Mail</option>
+                  <option value="in-person">In Person</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Delivery Address">
+            </div>
+            <div class="form-group">
+              <span class="mr-2">Payment Type</span>
+              <select>
+                  <option value="mail">Paypal</option>
+                  <option value="in-person">In Person</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Payment Email">
+            </div>
+          </div>
+
+      </div>
+
+      <div data-aos="fade-up">
+        <button class="btn btn-primary btn-block" (click)="submitOrder()">Submit Order</button>
+      </div>
+
+
+      <div data-aos="fade-up" class="text-center color-lightgray mt-1">
+        <p>Note: Since each Bachman Spinner is hand made, you will be contacted via email by our
+          team after submitting the order to confirm payment method and delivery. This may take up
+          to 1 to 2 business days. 
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>

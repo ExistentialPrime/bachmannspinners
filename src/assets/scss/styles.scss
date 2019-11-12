@@ -24,11 +24,15 @@
 @import './_typography.scss';  // font and color settings from style guide
 @import './_material-theme.scss';  // our Angular Material colors and styles (import after typography)
 @import './_theorder.scss'; // template styles for The Order
+@import './_buttons.scss'; // template styles for buttons
 
 // Component-sepcific style Imports
 @import './_modal.scss';
 @import './_landing-page.scss';
 @import './_gallery.scss';
+@import './_build-widget.scss';
+@import './_shop.scss';
+@import './_cart.scss';
 
 
 
@@ -62,5 +66,22 @@
         font-weight: bold;
     }
 }
+
+// Input styles
+input[type="number"] { 
+    padding-left: 5px;
+    height: 1.8rem;
+    width: 50px;
+}
+
+select {
+    height: 52px;
+    padding: 5px;
+    color: #495057;
+    border: 1px solid #ced4da;
+}
+
+
+
 
  

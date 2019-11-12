@@ -1,0 +1,47 @@
+.build-widget { }
+
+
+// Global Styles we want outside of here too, but will probably never be
+.spinner-component { 
+  position: relative;
+
+  &.bead {
+    width: 24px;
+    height: 24px;
+    background-image: url('/assets/spinnercomponents/bead-white.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.white { background-image: url('/assets/spinnercomponents/bead-white.png');  }
+    &.red { background-image: url('/assets/spinnercomponents/bead-red.png');  }
+    &.black { background-image: url('/assets/spinnercomponents/bead-black.png');  }
+  }
+
+  &.blade {
+    width: 105px;
+    height: 200px;
+    background-image: url('/assets/spinnercomponents/blade-gold.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.gold { background-image: url('/assets/spinnercomponents/blade-gold.png'); }
+    &.silver { background-image: url('/assets/spinnercomponents/blade-silver.png'); }
+    &.black { background-image: url('/assets/spinnercomponents/blade-black.png'); }
+  }
+
+
+  &.hook { 
+    width: 100px;
+    height: 100px;
+    background-image: url('/assets/spinnercomponents/hook-treble.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &.single { background-image: url('/assets/spinnercomponents/hook-single.png'); }
+    &.treble { background-image: url('/assets/spinnercomponents/hook-treble.png'); }
+  }
+
+  
+}
+
+
