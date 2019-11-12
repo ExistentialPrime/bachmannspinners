@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cart, CartItem } from './../../models';
 import { ShopService } from './../../services/shop.service';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-cart',

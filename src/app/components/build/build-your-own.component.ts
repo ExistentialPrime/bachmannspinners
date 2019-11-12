@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalComponent } from '../modals/modal.component';
 import { Modal } from '../../models';
-import { MatDialog } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
 import swal from 'sweetalert2';
 import * as AOS from 'aos';
 
