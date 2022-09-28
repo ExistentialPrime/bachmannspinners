@@ -40,9 +40,29 @@ export class ShopService {
       items: [],
       totalBasePrice: 0,
       totalPriceWithTax: 0,
+
+			// Checkout info
+			contactName: '',
+			contactEmail: '',
+			contactPhone: '',
+			message: '',
+			shippingAddress: '',
+			deliveryType: '',
+			paymentType: '',
+			paymentEmail: '',
     };
     this._currentCart.next(c);
   }
+
+	// Reset a cart after an order
+	public resetCart(c: Cart): void {
+		c.orderId = this.helper.generateUUID();
+    c.items = [];
+  	c.totalBasePrice = 0;
+    c.totalPriceWithTax = 0;
+		// should maintain any checkout info other than items
+		this._currentCart.next(c);
+	}
 
   // Add an item to the cart
   public addItem(item: CartItem, qty: number): void {
@@ -102,5 +122,16 @@ export class ShopService {
   public setMockCart(c: Cart): void {
     this._currentCart.next(c);
   }
+
+
+
+	// Submit new order (currently via email)
+	// ----------------------------------------------------------------------------
+	public async submitCartOrder(c: Cart): Promise<string> { 
+		let result: string = 'Submitting order...';
+		result = await this.helper.sendEmail(c); // result should either be 'Success' or some other error message
+		return result;
+	}
+
 
 }

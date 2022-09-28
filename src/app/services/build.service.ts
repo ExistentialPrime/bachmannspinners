@@ -47,7 +47,7 @@ export class BuildService {
             new Blade({ color: 'Gold', size: 3, position: 2 }),
             new Bead({ color: 'Red', size: 14, position: 3 }),
         ]
-     }
+     };
 
      this._spinner.next(newSpinner); // subscribers to currentSpinner$ will get the new one
     }

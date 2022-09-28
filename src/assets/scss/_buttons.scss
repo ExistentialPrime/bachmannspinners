@@ -20,3 +20,7 @@
 .btn-outline-gray:hover {
   background: rgba(75, 75, 75, 0.8);
  }
+
+ .btn:disabled {
+	cursor: not-allowed;
+ }

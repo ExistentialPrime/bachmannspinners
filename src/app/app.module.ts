@@ -1,7 +1,7 @@
 // Angular System Imports
 // -----------------------------------------------------------------------------------------------------
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -40,6 +40,33 @@ import { HelperService } from './services/helper.service';
 import { ShopService } from './services/shop.service';
 
 
+// App Initialize (for Facebook SDK)
+// -----------------------------------------------------------------------------------------------------
+function initializeApp(): Promise<any> {
+  return new Promise((resolve, reject) => {
+
+		// wait for facebook sdk to initialize before starting the angular app
+		window['fbAsyncInit'] = function () {
+			FB.init({
+					 appId: '177490725634484', // dragonville app id - still doesnt work
+					cookie: true,
+					xfbml: true,
+					version: 'v15.0'
+			});
+		};
+
+    // wait for facebook sdk to initialize before starting the angular app
+		(function (d, s, id) {
+			let js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) { return; }
+			js = d.createElement(s); js.id = id; js.crossorigin = 'anonymous'; js.nonce = 'aWPh3VhW';
+			js.src = 'https://connect.facebook.net/en_US/sdk.js';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'fb-root'));
+  });
+}
+
+
 
 // Module Declaration
 @NgModule({
@@ -70,7 +97,12 @@ import { ShopService } from './services/shop.service';
   providers: [
     BuildService,
     HelperService,
-    ShopService
+    ShopService,
+		/*{
+			provide: APP_INITIALIZER,
+			useFactory: () => initializeApp,
+			multi: true
+		 }*/
   ],
   bootstrap: [AppComponent],
   entryComponents: [

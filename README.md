@@ -1,15 +1,15 @@
 # Bachman Spinners
 
-The web front end for a modern Bachman Spinners public website. Built in Angular7 by Peter Mooney
+The web front end for a modern Bachman Spinners public website. Built in Angular 8 by Peter Mooney
 
 ## Template
 
 HTML Based on a free template: The Order (by colorlib) - https://colorlib.com/preview/#theorder
 
 
-# Angular-CLI
+# Facebook Page Plugin
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
+To set up facebook plugin to show a page feed see https://developers.facebook.com/docs/plugins/page-plugin/ and make sure to initialize the sdk first via https://jasonwatmore.com/post/2020/09/22/angular-facebook-how-to-use-the-facebook-sdk-in-an-angular-app
 
 ## Development server
 
