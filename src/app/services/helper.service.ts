@@ -16,7 +16,7 @@ export class HelperService {
 	// Send an email
 	public async sendEmail(c: Cart): Promise<string> { 
 		let result = 'Sending email...';
-		let toAddresses = ['pjmooney@gmail.com']; // 'bachmanspinners@yahoo.com';
+		let toAddresses = ['bachmanspinners@yahoo.com', c.contactEmail]; // bachmans + buyer
 		let fromAddress = 'no-reply@bachmanspinners.com';
 		let now = new Date();
 		let datehour = '' + now.getFullYear() + (now.getMonth() + 1) + now.getDate() + now.getHours() + now.getMinutes();
@@ -81,6 +81,7 @@ export class HelperService {
 		});
 
 		// <!-- Order Confirmation Email (sent to both the customer and the bachmans) -->
+		// NOTE: Using base price, TAX NOT INCLUDED CURRENTLY! 
 		let bodyEXAMPLE = `
 			<h2 style="color: #2e6c80;">Bachman Spinners Order no. 12345678</h2>
 			<p>Thank you for placing an order for Bachman Spinners. Because our spinners are hand made, orders may take some time to put together. 
@@ -110,7 +111,10 @@ export class HelperService {
 			A team member will be in contact with you to confirm the order and work out the next steps for payment and delivery. Please allow 1-2 business
 			days for the response. If you have any concerns or issues, please contact bachmanspinners (at) yahoo (dot) com or reach out to them on Facebook. 
 			Below are the details of your order.</p>
-			<h2 style="color: #2e6c80;">Order Details:</h2><ul>` + itemsHtml + `</ul>
+			<h2 style="color: #2e6c80;">Order Details:</h2>
+			 <ul>` + itemsHtml + `
+			  <li>Total: ` + c.totalBasePrice + `</li>
+			 </ul>
 			<h2 style="color: #2e6c80;">Contact Information:</h2>
 			<ul>
 			<li>Name: ` + c.contactName + `</li>

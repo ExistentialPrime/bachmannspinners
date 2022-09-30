@@ -27,7 +27,7 @@ export class CartComponent implements OnInit {
   // Initialization
   ngOnInit() {
     this.shopService.currentCart$.subscribe(c => this.cart$ = c);
-     this.mockCart();
+    // this.mockCart();
   }
 
 

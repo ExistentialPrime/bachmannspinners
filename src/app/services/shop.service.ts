@@ -60,6 +60,7 @@ export class ShopService {
     c.items = [];
   	c.totalBasePrice = 0;
     c.totalPriceWithTax = 0;
+		c.totalItems = 0;
 		// should maintain any checkout info other than items
 		this._currentCart.next(c);
 	}

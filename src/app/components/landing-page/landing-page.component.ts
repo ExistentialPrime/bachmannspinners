@@ -18,7 +18,13 @@ export class LandingPageComponent implements OnInit {
   }
 
   showVideo() {
-    swal.fire('Play Video', 'We need a sweet promo video or fish catch or release video here', 'success');
+    swal.fire('Play Video', 'Waiting on Chris or Tim to upload a sweet GoPro vid of their monster 25.5" brown', 'success');
   }
+
+	submitContact() {
+		swal.fire('Contact us via Facebook', 'Email form not yet functional. Please contact us on Facebook in the meantime.', 'warning');
+	}
+
+
 
 }
